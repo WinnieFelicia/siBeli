@@ -32,7 +32,7 @@ class DMasukResource extends Resource
                 ->label('Kode Masuk')
                 ->options(Masuk::all()->pluck('kdMasuk', 'id'))
                 ->searchable(),
-                Forms\Components\TextInput::make('kdBarangbeli')
+                Forms\Components\TextInput::make('kdBarangBeli')
                 ->label('Kode Barang Beli')
                 ->maxLength(5)
                 ->required(),
@@ -51,7 +51,7 @@ class DMasukResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('idMasuk')->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('kdMasuk')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('kdBarangbeli')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('kdBarangBeli')->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('jumlah')->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('subTotal')->sortable()->searchable(),
             ])
